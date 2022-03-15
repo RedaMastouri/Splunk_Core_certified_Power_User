@@ -18,3 +18,6 @@
 8. CySA+
 9. CISM
 10. IASP
+
+# Mentor 
+![image](https://www.linkedin.com/in/hailie-shaw-098b561a7/details/certifications/)[Hailie Shaw]
