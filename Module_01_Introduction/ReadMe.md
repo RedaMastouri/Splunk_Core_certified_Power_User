@@ -9,6 +9,19 @@ Security information and event management is a field within the field of compute
 ![image](https://www.precisely.com/app/uploads/2019/11/SIEM-Graphic_2020-800x432.png)
 
 
+## What is Splunk?
+- Splunk is a SIEM
+- It is a Network Analysis Tool for big data analytics 
+- It help to read the raw events and we structure those events to make sense of the data that we're working at
+1.1. Data Analytics: Gives all the metrics for all the things 
+1.2. Data Ingest: Data parser, organizer, accepter of all forms of data (Strutured and unstructured)
+1.3. Visual display: Create graphs, charts, heat maps, interactive GUI, generate reports, and more.
+1.4. Tells the Story: Insight to security intelligence, business operations, identities and assets, etc. 
+
+## What does it do?
+
+## How will we be using it?
+
 
 ## Notes
 Regarding the Unit prefixes confusion I recommend reading:
