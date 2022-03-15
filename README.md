@@ -20,4 +20,4 @@
 10. IASP
 
 # Mentor 
-![image](https://www.linkedin.com/in/hailie-shaw-098b561a7/details/certifications/)[Hailie Shaw]
+[Hailie Shaw](https://www.linkedin.com/in/hailie-shaw-098b561a7/details/certifications/)
