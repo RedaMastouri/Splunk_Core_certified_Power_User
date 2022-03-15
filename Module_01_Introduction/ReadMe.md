@@ -23,7 +23,9 @@ Security information and event management is a field within the field of compute
 ## How will we be using it?
 - 1. 1. Craft searches: Learn how to SPL (Search Processing Language)
 > Learn more about SPL in this [link](https://www.tutorialspoint.com/splunk/splunk_search_language.htm)
+
 > [SPL Cheat Sheet](https://www.splunk.com/pdfs/solution-guides/splunk-quick-reference-guide.pdf)
+
 - 1. 2. Network Traffic Analysis: Review alerts, create signatures, build searches to check for traffic patterns, query for indicators
 - 1. 3. Visualize our Data: Build dashboards, create graphs, pie charts, display geographical information, generate reports, timeline analysis
 
