@@ -11,6 +11,12 @@ There are 3 main components in Splunk:
 ![image](https://hkrtrainings.com/storage/photos/500/Splunk-Architecture6.png)
 
 ## Forwarder (F) 
+```
+A forwarder is used to – as the name suggests –orward the data to a specific target. There are two types of forwarders:
+- Heavy Forwarders
+- Lightweight Forwarders
+Depending on the use case for the data and infrastructure which decide role for selecting the type of forwarder. To learn more about the difference refer this link.
+```
 
 Splunk Forwarder is the component which you have to use for collecting the logs. Suppose, you want to collect logs from a remote machine, then you can accomplish that by using Splunk’s remote forwarders which are independent of the main Splunk instance.
 
@@ -26,6 +32,12 @@ Compared to other traditional monitoring tools, Splunk Forwarder consumes very l
 - Feeds your raw data to the index
 
 ## Indexer (I)
+```
+An indexer is used to index/parse the data. Splunk uses its proprietary algorithm to store the data in a way that it can be retrieved in a faster manner and then searched upon.
+
+In a distributed deployment – search head (where user searches) and an indexer (where the data is stored) can be separated out. This makes sure that both of the functions i.e. searching and storing is done in a quick and efficient manner. To understand how Splunk indexes data, you can follow this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/Indexer/Aboutindexesandindexers)
+```
+
 ndexer is the Splunk component which you will have to use for indexing and storing the data coming from the forwarder. Splunk instance transforms the incoming data into events and stores it in indexes for performing search operations efficiently. If you are receiving the data from a Universal forwarder, then the indexer will first parse the data and then index it. Parsing of data is done to eliminate the unwanted data. But, if you are receiving the data from a Heavy forwarder, the indexer will only index the data.
 
 As the Splunk instance indexes your data, it creates a number of files. These files contain one of the below:
@@ -53,6 +65,9 @@ Another benefit with Splunk Indexer is data replication. You need not worry abou
 - Has your raw data
 
 ## Search Head (SH)
+```
+A search head is used to – as the name suggests –search the data. Search heads get all the traffic from the end users. End users log into the UI using the search head and run their searches, reports, alerts, and dashboards and other knowledge objects.
+```
 
 Search head is the component used for interacting with Splunk. It provides a graphical user interface to users for performing various operations. You can search and query the data stored in the Indexer by entering search words and you will get the expected result.
 
@@ -96,3 +111,89 @@ W- hen this data is received, it is stored in an Indexer. The indexer is then br
 - [Extra from the Splunk documentation](https://www.testpreptraining.com/blog/splunk-enterprise-certified-admin-cheat-sheet/)
 
 - [Splunk Best Practices](https://www.aplura.com/splunk-best-practices/)
+
+
+
+
+# Type of Splunk Deployments
+Splunk is an incredibly robust tool that can scale depending on the certain parameters:
+- Number of users using the deployment
+- Amount of data coming in
+- Number of endpoints sending data to the deployment
+
+
+Depending upon the above parameters you can horizontally/vertically scale a deployment to accommodate to your needs. In this blog we will briefly discuss following deployments:
+
+- Standalone deployment
+- Distributed deployment
+- Clustered deployment
+
+Before we dive into various deployments, let us go over some of the widely used components in a Splunk deployment. Splunk comes out of the box with the following components and can be tailored suit your needs. Bear in mind – these components will be used in all the deployments except “Standalone”. Will shed more light on this later.
+
+Components above are represented diagrammatically as follows:
+![image](https://www.crestdatasys.com/wp-content/uploads/2019/09/splunk-components-diagram.jpg)
+Now that we have covered understanding of basic components, let’s go over the different deployments of Splunk.
+
+## Standalone
+A standalone deployment in Splunk means that all the functions that Splunk does are managed by a single instance. Various functions that a Standalone Deployment can do are:
+- Searching
+- Indexing
+- Parsing
+Hold Knowledge Objects (This covers Reporting/Alerting/Dashboard Creation and many more)
+
+#### When is this deployment type used?
+
+This type of deployment is typically used when there are a limited number of users and a very limited amount of data flowing into Splunk.
+
+#### Pros/Cons of this Type of Deployment:
+| Component  | Pros | Cons |
+| ------------- | ------------- | ------------- |
+| Supportability  | Very easy to manage and support as it has only one instance  | N/A  |
+| High Availability  | N/A  | No high availability as it is a single point of failure  |
+| Disaster Recovery  | N/A  | No disaster availability as it is a single point of failure  |
+| Search Concurrency  | N/A  | Low search concurrency as it is a single instance and can be over-loaded easily  |
+
+
+## Distributed Deployment 
+There are a few drawbacks of a “Standalone” deployment for Splunk in terms of High Availability, Disaster Recovery and Search Concurrency. To overcome some of these, Splunk can be set up in a way to distribute the tasks to different instances within the platform.
+
+In this deployment, the roles of the Search Head, Indexers and Forwarders are split to create a distributed deployment.
+![image](https://www.crestdatasys.com/wp-content/uploads/2019/03/deployment.png)
+To do this we need to create a distributed search. To learn more about distributed search click on this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/DistSearch/Whatisdistributedsearch).
+
+We can see that we have now split the functions of each component to create a distributed environment. Find the comparison as follows:
+| Component  | Pros | Cons |
+| ------------- | ------------- | ------------- |
+| Supportability  | Easy to support as the components are separated out in different functions  | N/A  |
+| High Availability  | N/A  | Single point of failure. If the indexer goes down, then indexing stops.  |
+| Disaster Recovery  | N/A  | Single point of failure.  |
+| Search Concurrency  | Higher search concurrency compared to standalone as Search head is separated out  | If the users are more, consider going into search head clustering for higher search concurrency  |
+
+## Multi-Instance: Clustered Deployment
+We can’t achieve features like High Availability and Disaster Recovery for mission-critical production deployments. To achieve this, we need a clustered deployment which looks as follows:
+![image](https://www.crestdatasys.com/wp-content/uploads/2019/03/3.-Cluster-Deployment-768x641.png)
+
+In the above deployment, the indexers are in a cluster and there is something called a “Master Node” – this Master Node or Cluster Master manages the indexers and replicates the data across multiple indexers. This creates more than one copy of data across the deployment giving the users “High Availability” of the data.
+
+#### Master Node Functions:
+- Manages configurations/apps across all the Peer nodes/indexers
+- Manages incoming search requests from the search heads
+- Knows all the copies of the data that is indexed and replicates if any indexer goes out of service
+
+#### Search Head Captain Functions:
+- Manages the search load coming in from users
+- Delegates search jobs coming in from different search head members
+- Replicates the knowledge bundle across the search head cluster.
+
+We can also see the Search Heads are now in a cluster. This means that it now gives us “High Search Concurrency” which was a drawback in a previous distributed deployment.
+
+To learn how to do indexer clustering please follow this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/Indexer/Aboutclusters). To learn how to do search head clustering please follow this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/DistSearch/AboutSHC).
+
+| Component  | Pros | Cons |
+| ------------- | ------------- | ------------- |
+| Supportability  | Supportaibility is challenging, however, with Master and Captain Nodes we can manage the Splunk configs and apps easily  | N/A  |
+| High Availability  | Highly Available as data is replicated across multiple nodes and if single indexer goes down still the data is searchable. If a search head goes down, other search heads will continue to provide the service  | N/A  |
+| Disaster Recovery  | No disaster recovery  | No disaster recovery  |
+| Search Concurrency  | High search concurrency as there is a cluster of Search Heads serving multiple customers  | N/A  |
+
+The learn more on how to size and scale any Splunk deployments please refer this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/Capacity/DimensionsofaSplunkEnterprisedeployment).
