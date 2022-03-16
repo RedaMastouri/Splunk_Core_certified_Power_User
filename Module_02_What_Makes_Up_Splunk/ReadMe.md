@@ -200,3 +200,7 @@ To learn how to do indexer clustering please follow this [link](https://docs.spl
 | Search Concurrency  | High search concurrency as there is a cluster of Search Heads serving multiple customers  | N/A  |
 
 The learn more on how to size and scale any Splunk deployments please refer this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/Capacity/DimensionsofaSplunkEnterprisedeployment).
+
+
+# Extras
+[SLR Cheat Sheet](https://docs.splunk.com/images/1/17/4.2.x_search_language_refcard.pdf)
