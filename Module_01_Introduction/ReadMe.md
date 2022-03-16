@@ -91,9 +91,11 @@ Once the data ingested into Splunk we can start searching. By default, Splunk pr
 #### Let’s do it step by step
 
 After Logging in into your Splunk instance, you can see the Search & Reporting app on the left side.
+
 ![image](https://www.crestdatasys.com/wp-content/uploads/2019/02/1.-Splunk-Search.png)    
     
 Click on the Search & Reporting app to get into the app. You can see Search bar with time range picker. Using this Search bar you can search event within a particular time-frame.
+
 ![image](https://www.crestdatasys.com/wp-content/uploads/2019/02/2.-Splunk-search-bar-768x127.png)
 
 
