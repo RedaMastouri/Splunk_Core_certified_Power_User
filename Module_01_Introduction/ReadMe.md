@@ -10,6 +10,7 @@ Security information and event management is a field within the field of compute
 
 ## What is Managed SIEM Services?
 ![image](https://www.crestdatasys.com/wp-content/uploads/2021/06/Security-Information-and-Event-Mgmt.-SIEM.png)
+
 Early detection, rapid response, collaboration to mitigate advanced threats imposes significant demands on today’s enterprise security teams. SIEM’s ability to detect complex and evolving cyber threats makes it an essential and powerful tool to operate security operations center (SOC) for organizations of all sizes.
 - Identity and access Management: Investigate incidents and conduct forensic investigation
 - Siloed Tools with Overlapping Functionalities
