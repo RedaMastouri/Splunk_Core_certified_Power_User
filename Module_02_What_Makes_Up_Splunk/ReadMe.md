@@ -88,3 +88,11 @@ W- hen this data is received, it is stored in an Indexer. The indexer is then br
 - You can use saved searches to create reports and make analysis by using Visualization dashboards
 - Finally you can use Knowledge objects to enrich the existing unstructured data
 - Search heads and Knowledge objects can be accessed from a Splunk CLI or a Splunk Web Interface. This communication happens over a REST API connection
+
+
+## Cheat sheets
+- [SANS Ultimate Cheat sheets](https://www.sans.org/blog/the-ultimate-list-of-sans-cheat-sheets/)
+
+- [Extra from the Splunk documentation](https://www.testpreptraining.com/blog/splunk-enterprise-certified-admin-cheat-sheet/)
+
+- [Splunk Best Practices](https://www.aplura.com/splunk-best-practices/)
