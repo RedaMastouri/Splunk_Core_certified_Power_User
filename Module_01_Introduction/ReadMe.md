@@ -8,6 +8,28 @@ Security information and event management is a field within the field of compute
 
 ![image](https://www.precisely.com/app/uploads/2019/11/SIEM-Graphic_2020-800x432.png)
 
+## What is Managed SIEM Services?
+![image](https://www.crestdatasys.com/wp-content/uploads/2021/06/Security-Information-and-Event-Mgmt.-SIEM.png)
+Early detection, rapid response, collaboration to mitigate advanced threats imposes significant demands on today’s enterprise security teams. SIEM’s ability to detect complex and evolving cyber threats makes it an essential and powerful tool to operate security operations center (SOC) for organizations of all sizes.
+- Identity and access Management: Investigate incidents and conduct forensic investigation
+- Siloed Tools with Overlapping Functionalities
+- Ability to Identify & Prioritize Growing Security Risks
+- Growing Complexities & Costs of In-house Security Operations
+
+## What is SIEM Services expected to do?
+SIEM platforms are expected to resolves many security use cases with following key capabilities:
+
+| Identity and access Management  | Log Management and Monitoring | Managed Vulnerability Scanning | Risk Management & Compliance | Managed Intrusion Detection |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Investigate incidents and conduct forensic investigation  | Aggregate all security related events and data (users, applications) in a single platform.  | Monitor Threat, generate KPI based alert, investigate threat, ad hoc search and reporting. | Automate retrieval, sharing and responses across the security stack. | Detect advanced and unknown threats, add threat intelligence and context to events. |
+
+## Managed Behavioral Analytics
+- ![image](https://www.crestdatasys.com/wp-content/uploads/elementor/thumbs/Icons_Page-04_AWS-p8dj84clg7lt789vczpyirjupw5uvgu7zz1nrxrnam.png) : Reduce the cost of hiring, training, managing, and retaining high-quality security engineering personnel.
+- ![image](https://www.crestdatasys.com/wp-content/uploads/elementor/thumbs/Icons_Page-04b_Configuration-Management-p8dj891seds8ta31ljr3d8d5otioxycvomb36bkofi.png) : Reduce your organization’s cyber security risk
+- ![image](https://www.crestdatasys.com/wp-content/uploads/elementor/thumbs/Icons_Page-03_Managed-SIEM-Services-p8dj84clg7lt789vczpyirjupw5uvgu7zz1nrxrnam.png) : Maximize the benefit of your SIEM investment
+- ![image](https://www.crestdatasys.com/wp-content/uploads/elementor/thumbs/Icons_Page-02_Security-Data-Analytics-p8dj83er9dkivmb8ihbby9se4iahnrqhnue6ant1gu.png) : Adds meaningful insights and new perspectives to make better security decisions.
+- ![image](https://www.crestdatasys.com/wp-content/uploads/elementor/thumbs/Icons_Page-04a_Platform-Migration-p8dj883y7jqyho4er1cgsqlp3fnbq995chnlp1m2lq.png) : Demonstrate adherence to required regulatory compliance needs
+- ![image](https://www.crestdatasys.com/wp-content/uploads/elementor/thumbs/Icons_Page-04b_AWS-p8dj891seds8ta31ljr3d8d5otioxycvomb36bkofi.png) : Gain enterprise-wide visibility into the performance of security control.
 
 ## What is Splunk?
 - Splunk is a SIEM
