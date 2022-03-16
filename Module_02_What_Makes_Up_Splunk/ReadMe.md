@@ -113,8 +113,6 @@ W- hen this data is received, it is stored in an Indexer. The indexer is then br
 - [Splunk Best Practices](https://www.aplura.com/splunk-best-practices/)
 
 
-
-
 # Type of Splunk Deployments
 Splunk is an incredibly robust tool that can scale depending on the certain parameters:
 - Number of users using the deployment
@@ -132,6 +130,8 @@ Before we dive into various deployments, let us go over some of the widely used 
 
 Components above are represented diagrammatically as follows:
 ![image](https://www.crestdatasys.com/wp-content/uploads/2019/09/splunk-components-diagram.jpg)
+
+
 Now that we have covered understanding of basic components, let’s go over the different deployments of Splunk.
 
 ## Standalone
@@ -159,6 +159,8 @@ There are a few drawbacks of a “Standalone” deployment for Splunk in terms o
 
 In this deployment, the roles of the Search Head, Indexers and Forwarders are split to create a distributed deployment.
 ![image](https://www.crestdatasys.com/wp-content/uploads/2019/03/deployment.png)
+
+
 To do this we need to create a distributed search. To learn more about distributed search click on this [link](https://docs.splunk.com/Documentation/Splunk/7.2.4/DistSearch/Whatisdistributedsearch).
 
 We can see that we have now split the functions of each component to create a distributed environment. Find the comparison as follows:
@@ -172,6 +174,7 @@ We can see that we have now split the functions of each component to create a di
 ## Multi-Instance: Clustered Deployment
 We can’t achieve features like High Availability and Disaster Recovery for mission-critical production deployments. To achieve this, we need a clustered deployment which looks as follows:
 ![image](https://www.crestdatasys.com/wp-content/uploads/2019/03/3.-Cluster-Deployment-768x641.png)
+
 
 In the above deployment, the indexers are in a cluster and there is something called a “Master Node” – this Master Node or Cluster Master manages the indexers and replicates the data across multiple indexers. This creates more than one copy of data across the deployment giving the users “High Availability” of the data.
 
